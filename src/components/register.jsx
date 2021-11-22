@@ -3,59 +3,54 @@ class Register extends Component {
   render() {
     return (
       <div>
-        <h3>Registration Page</h3>
-        <div className=" mx-auto  w-50 border border-dark pt-3 pb-3">
-          <div className="mb-3 px-5">
-            <label for="formGroupExampleInput2" className="form-label">
-              Email Id
+        <h3>Registration Form</h3>
+        <form className="w-50 mx-auto border p-3 ">
+          <div className="mb-3 ">
+            <label for="exampleInputEmail1" className="form-label">
+              Email
+            </label>
+            <input
+              type="email"
+              className="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div className="mb-3 ">
+            <label for="exampleInputPassword1" className="form-label">
+              Contact Number
             </label>
             <input
               type="text"
               className="form-control"
-              id="formGroupExampleInput2"
-              placeholder="Enter Email"
+              id="exampleInputPassword1"
             />
           </div>
-          <div className="mb-3 px-5">
-            <label for="formGroupExampleInput2" className="form-label">
-              Contact No
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="formGroupExampleInput2"
-              placeholder="Enter Last Name"
-            />
-          </div>
-
-          <div className="mb-3 px-5">
-            <label for="formGroupExampleInput2" className="form-label">
+          <div className="mb-3 ">
+            <label for="exampleInputPassword1" className="form-label">
               Password
             </label>
             <input
-              type="text"
+              type="password"
               className="form-control"
-              id="formGroupExampleInput2"
-              placeholder="Enter password"
+              id="exampleInputPassword1"
             />
           </div>
-          <div className="mb-3 px-5">
-            <label for="formGroupExampleInput2" className="form-label">
-              Confirm Password
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="formGroupExampleInput2"
-              placeholder="Confirm password"
-            />
-          </div>
-          <div class="d-grid gap-2 mb-3 px-5">
+          <select
+            className="form-select mb-3 ml-3 px-5"
+            aria-label="Default select example"
+            name="role"
+          >
+            <option selected>Select Role</option>
+            <option value="Client">Client</option>
+            <option value="Admin">Admin</option>
+          </select>
+          <div class="d-grid gap-2 mb-3 ">
             <button class="btn btn-primary" type="button">
               Submit
             </button>
           </div>
-        </div>
+        </form>
       </div>
     );
   }

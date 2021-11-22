@@ -11,12 +11,16 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 
 import Complaints from "./components/complaints";
+import AddAdmin from "./components/addadmin";
+import Admin from "./components/admin";
 
 function App() {
   return (
     <div className="App">
       <Nav />
       <Switch>
+        <Route path="/admin/add" component={AddAdmin} />
+        <Route path="/admin" component={Admin} />
         <Route path="/posts" component={Posts} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
